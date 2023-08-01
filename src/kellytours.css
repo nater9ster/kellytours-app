@@ -1,0 +1,74 @@
+/* ... Previous styles ... */
+
+.navbar {
+  background-color: #901CAD;
+}
+
+body {
+  background-color: #dbf9fc;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.col-md-6 h2 {
+  color: #333;
+  font-size: 28px;
+  /* Adjust font size for heading */
+  margin-bottom: 20px;
+  /* Adjust the margin for spacing */
+}
+
+.col-md-6 p {
+  color: #777;
+  font-size: 28px;
+  /* Adjust font size for paragraph */
+  line-height: 1.6;
+}
+
+/* ... Previous styles ... */
+
+.text-container {
+  background-color: #dcb8db;
+  padding: 20px;
+  /* Adjust padding for spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Remove height: 50%; let flexbox handle height */
+
+  /* Set max-width to control the container's width */
+  max-width: 100%;
+  /* Add some horizontal padding to avoid text getting too close to the edges */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-container h2 {
+  color: #333;
+  font-size: 28px;
+  /* Adjust font size for heading (consistent with .col-md-6 h2) */
+  margin-bottom: 20px;
+  /* Adjust the margin for spacing (consistent with .col-md-6 h2) */
+}
+
+.text-container p {
+  color: #777;
+  font-size: 20px;
+  /* Adjust font size for paragraph (consistent with .col-md-6 p) */
+  line-height: 1.6;
+}
+/* Adjust the height of the image placeholder */
+.image-placeholder {
+  height: 100%; /* Adjust the height as needed */
+  max-width: 100%; /* Ensure the image is not wider than its parent */
+  object-fit: cover; /* Ensure the image scales proportionally */
+}
+
+.carousel-image {
+  width: 200px;
+  height: auto;
+}
+
+/* ... Previous styles ... */
