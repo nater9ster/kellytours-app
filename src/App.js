@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import KellyTours from "./KellyTours"; // Import the main component
 import 'bootstrap/dist/css/bootstrap.css';
