@@ -1,0 +1,30 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid purple; /* Add a border around the footer */
+    padding: 20px; /* Add padding to the footer */
+    margin-top: 20px; /* Push the footer below the image carousel */
+  }
+  
+  /* Footer text styles */
+  .footer-text {
+    color: purple; /* Change the text color to purple */
+    margin-bottom: 10px; /* Add spacing below the text */
+  }
+  
+  /* Social icons container styles */
+  .social-icons {
+    display: flex;
+    gap: 20px; /* Adjust the spacing between icons */
+  }
+  
+  /* Social icon styles */
+  .social {
+    color: #000; /* Set the color of the social icons */
+    transition: color 0.3s; /* Add a color transition effect */
+  }
+  
+  .social:hover {
+    color: purple; /* Change the color on hover */
+  }

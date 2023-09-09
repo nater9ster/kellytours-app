@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./kellytours.css"; // Import your main CSS file
+import "./styles/kellytours.css"; // Import your main CSS file
 import KellyTours from './KellyTours'; // Import the main component
 import reportWebVitals from "./reportWebVitals";
 import 'bootstrap/dist/css/bootstrap.css';

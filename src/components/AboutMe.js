@@ -1,36 +1,50 @@
 import React from "react";
 import Navbar from "./Navbar"; // Import Navbar component
+import Footer from "./Footer";
 
 const AboutMe = () => {
     return (
         <div>
             <Navbar />
-            <div class="container">
-                <div class="row row-content full-height">
-                    <div class="col-md-6 text-center text-container full-height">
-                        <h2><strong>Take a walking tour with KellyManhattanTours!</strong></h2>
-                        <h2><em>Portuguese!</em></h2>
-                        <p>
-                            Olá! São tantos lugares para visitar e ver que fica difícil escolher quais lugares visitar e em que
-                            dia E quanto posso fazer em um dia? Se você tem uma ideia do que gostaria de ver, posso ajudar a
-                            personalizá-lo para você e agendar um passeio de 4 a 5 horas para você aproveitar! Grande Maçã, aí
-                            vem você!
-                        </p>
-                        <h2>
-                            <em>Or English!</em>
-                        </h2>
-                        <p>
-                            Hello! There are so many places to visit and see, it's hard to choose which places to visit and what
-                            day AND how much can I do in one day? If you have an idea of what you would like to see, I can help
-                            customize it for you and schedule a 4 to 5 hour tour for you to enjoy! Big Apple, here you come!
-                        </p>
+            <div>
+                <section id="about" class="py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="kellytours-app/src/assets/img/kelymain.jpg" alt="Profile Image" class="img-fluid"></img>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2>About Me</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at metus mi. Quisque congue gravida
+                                    nulla a efficitur. Nunc lacinia mauris ut sem cursus venenatis. Sed nec tristique ipsum.</p>
+                                <p>Pellentesque non congue nisl. Praesent at fermentum dolor. Phasellus convallis efficitur dui, non
+                                    interdum ex. Integer lacinia metus et enim semper auctor.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
+
+            <div>
+                <section id="photos" class="photo-section">
+                    <div class="container">
+                        <div class="row photo-grid">
+                            <div class="col-lg-4">
+                                <img src="kellytours-app/src/assets/img/empire_state" alt="Photo 1"></img>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="kellytours-app/src/assets/img/kelymanhattanwalkingtours.jpg" alt="Photo 2"></img>
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="kellytours-app/src/assets/img/kelyskyline.jpg" alt="Photo 3"></img>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <Footer />
         </div>
     );
 };
 
 export default AboutMe;
-
-

@@ -8,8 +8,14 @@ import Footer from "./components/Footer"; // Import Footer component
 
 const KellyTours = () => {
   return (
-    <Router>
-      <div>
+
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/request" element={<RequestTour />} />
+        </Routes>
+
         <Navbar />
 
         {/* Main content */}
@@ -66,18 +72,13 @@ const KellyTours = () => {
           <ImageCarousel />
         </div>
 
-        <Routes>
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/request" element={<RequestTour />} />
-        </Routes>
+      </Router>
 
-        {/* Footer */}
-        <Footer />
-      </div>
-    </Router>
+      {/* Footer */}
+      <Footer />
+    </div>
+
   );
 };
 
 export default KellyTours;
-
-
