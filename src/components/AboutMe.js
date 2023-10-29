@@ -7,18 +7,16 @@ const AboutMe = () => {
         <div>
             <Navbar />
             <div>
-                <section id="about" class="py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <img src="kellytours-app/src/assets/img/kelymain.jpg" alt="Profile Image" class="img-fluid"></img>
+                <section id="about" className="py-5">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <img src="./HudsonYards.JPG" alt="Profile Image" className="img-fluid" />
                             </div>
-                            <div class="col-lg-6">
+                            <div className="col-lg-6">
                                 <h2>About Me</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at metus mi. Quisque congue gravida
-                                    nulla a efficitur. Nunc lacinia mauris ut sem cursus venenatis. Sed nec tristique ipsum.</p>
-                                <p>Pellentesque non congue nisl. Praesent at fermentum dolor. Phasellus convallis efficitur dui, non
-                                    interdum ex. Integer lacinia metus et enim semper auctor.</p>
+                                <p>Hi, I'm Kelly! I'm a New York City tour guide specializing in walking tours for visiting Brazilians.</p>
+                                <p>I'm originally from Campinas, Sao Paulo, Brazil, and enjoy traveling and spending time with my family.</p>
                             </div>
                         </div>
                     </div>
@@ -26,17 +24,17 @@ const AboutMe = () => {
             </div>
 
             <div>
-                <section id="photos" class="photo-section">
-                    <div class="container">
-                        <div class="row photo-grid">
-                            <div class="col-lg-4">
-                                <img src="kellytours-app/src/assets/img/empire_state" alt="Photo 1"></img>
+                <section id="photos" className="photo-section">
+                    <div className="container">
+                        <div className="row photo-grid">
+                            <div className="col-lg-4">
+                                <img src="./FunTimesSquare.JPG" alt="Photo 1" />
                             </div>
-                            <div class="col-lg-4">
-                                <img src="kellytours-app/src/assets/img/kelymanhattanwalkingtours.jpg" alt="Photo 2"></img>
+                            <div className="col-lg-4">
+                                <img src="./CentralPark.JPG" alt="Photo 2" />
                             </div>
-                            <div class="col-lg-4">
-                                <img src="kellytours-app/src/assets/img/kelyskyline.jpg" alt="Photo 3"></img>
+                            <div className="col-lg-4">
+                                <img src="./ElegantLadies.JPG" alt="Photo 3" />
                             </div>
                         </div>
                     </div>
