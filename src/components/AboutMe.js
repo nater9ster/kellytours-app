@@ -28,13 +28,13 @@ const AboutMe = () => {
                     <div className="container">
                         <div className="row photo-grid">
                             <div className="col-lg-4">
-                                <img src="./FunTimesSquare.JPG" alt="Photo 1" />
+                                <img src="./FunTimesSquare.JPG" alt="Photo 1" className="img-fluid" />
                             </div>
                             <div className="col-lg-4">
-                                <img src="./CentralPark.JPG" alt="Photo 2" />
+                                <img src="./CentralPark.JPG" alt="Photo 2" className="img-fluid"/>
                             </div>
                             <div className="col-lg-4">
-                                <img src="./ElegantLadies.JPG" alt="Photo 3" />
+                                <img src="./ElegantLadies.JPG" alt="Photo 3" className="img-fluid"/>
                             </div>
                         </div>
                     </div>
