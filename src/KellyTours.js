@@ -33,13 +33,17 @@ const KellyTours = () => {
                 vem você!
               </p>
               <h2>
-                <em>Or English!</em>
+                <em>English!</em>
               </h2>
               <p>
                 Hello! There are so many places to visit and see, it's hard to choose which places to visit and what
                 day AND how much can I do in one day? If you have an idea of what you would like to see, I can help
                 customize it for you and schedule a 4 to 5 hour tour for you to enjoy! Big Apple, here you come!
               </p>
+              <h2>
+                <em>Or Spanish!</em>
+              </h2>
+              <p>Bienvenido a la ciudad de Nueva York! :)</p>
             </div>
             <div className="col-md-6">
               {/* Image placeholder (background image) */}

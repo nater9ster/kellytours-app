@@ -71,4 +71,16 @@ body {
   height: auto;
 }
 
-/* ... Previous styles ... */
+.photo-section img {
+  max-height: 400px; /* Adjust the height as needed */
+}
+
+/* styles.css */
+
+/* Set a maximum height for the profile image */
+.profile-image {
+  max-height: 900px;
+   /* You can adjust the height to your preference */
+}
+
+
