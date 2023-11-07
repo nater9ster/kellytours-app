@@ -1,26 +1,21 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutMe from './components/AboutMe';
-import RequestTour from './components/RequestTour';
-import Footer from './components/Footer';
-import React from 'react';
-import './App.css';
-import KellyTours from "./KellyTours"; // Import the main component
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import React from "react";
+import AboutMe from "./components/AboutMe";
+import RequestTour from "./components/RequestTour";
+import KellyTours from './KellyTours';
 import 'bootstrap/dist/css/bootstrap.css';
-// Put any other imports below so that CSS from your
-// components takes precedence over default styles.
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<KellyTours />} />
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/request" element={<RequestTour />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<KellyTours />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/request" element={<RequestTour />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 

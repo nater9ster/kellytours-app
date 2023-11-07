@@ -42,7 +42,7 @@ const RequestTour = () => {
 
     const handleAdditionalInfoChange = (event) => {
         setAdditionalInfo(event.target.value);
-      };
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -135,7 +135,7 @@ const RequestTour = () => {
                     </select>
                 </div>
                 <div className="form-group">
-                    <label htmlFor="additionalInfo">Any additional information you would like to add?</label>
+                    <label htmlFor="additionalInfo">Any additional information you would like to add? Other locations to visit?</label>
                     <textarea
                         className="form-control"
                         id="additionalInfo"

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark sticky top">
@@ -21,9 +20,6 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {/* <a className="nav-link" href="https://www.instagram.com/kellymanhattantours/">
-        <i className="fab fa-instagram"></i> My Instagram!
-      </a> */}
     </nav >
   );
 };

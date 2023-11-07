@@ -1,26 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from "react";
 import Navbar from "./components/Navbar";
 import ImageCarousel from "./components/ImageCarousel";
-import AboutMe from "./components/AboutMe"; // Import AboutMe component
-import RequestTour from "./components/RequestTour"; // Import RequestTour component
 import Footer from "./components/Footer"; // Import Footer component
 
 const KellyTours = () => {
   return (
 
     <div>
-      <Router>
-        <Routes>
-          <Route path="/about" element={<AboutMe />} />
-          <Route path="/request" element={<RequestTour />} />
-        </Routes>
 
         <Navbar />
 
         {/* Main content */}
-        {/* ... Your main content ... */}
-        {/* Main content */}
+
         <div class="container">
           <div class="row row-content full-height">
             <div class="col-md-6 text-center text-container full-height">
@@ -46,40 +37,17 @@ const KellyTours = () => {
               <p>Bienvenido a la ciudad de Nueva York! :)</p>
             </div>
             <div className="col-md-6">
-              {/* Image placeholder (background image) */}
-              {/* <div
-              className="image-placeholder"
-              style={{
-                backgroundImage: `url('/empire_state.jpg')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                height: "100%",
-              }}
-            ></div> */}
-              {/* Or use img tag */}
               <img src="/empire_state.jpg" alt="New York City" className="image-placeholder" />
             </div>
 
           </div>
         </div>
-        {/* <div class="container align-right">
-        <div class="row row-content full-height">
-          <div class="col-md-6 text-center text-container full-height">
-            <img src="/empire_state.jpg" alt="New York City" class="image-placeholder"></img>
-          </div>
-        </div>
-      </div> */}
-        {/* Additional sections or components can be added here */}
-        {/* For example, you can add more content, other components, or section dividers */}
-        {/* Image Carousel */}
         <div className="container mt-4">
           <ImageCarousel />
         </div>
 
-      </Router>
-
-      {/* Footer */}
-      <Footer />
+      <Footer /> 
+      
     </div>
 
   );

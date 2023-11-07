@@ -25,6 +25,7 @@ const AboutMe = () => {
                                 <p>I can also book:</p>
 
                                 <ol><b>Airport transfers</b></ol>
+                                <ol><b>Hotels</b></ol>
                                 <ol><b>Bus tours</b></ol>
                                 <ol><b>Broadway tickets</b></ol>
                                 <ol><b>City Go passes</b></ol>

@@ -83,4 +83,10 @@ body {
    /* You can adjust the height to your preference */
 }
 
+/* custom.css */
+.carousel-image {
+  height: 290px; /* Set the desired height */
+}
+
+
 
