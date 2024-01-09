@@ -8,11 +8,11 @@ const ImageCarousel = () => {
   const carouselSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2900,
   };
 
   // <img src={require('/assets/img/empire_state.jpg')} />

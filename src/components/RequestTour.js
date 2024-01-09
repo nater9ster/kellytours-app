@@ -3,6 +3,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Import the styles
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 const RequestTour = () => {
     const [startDate, setStartDate] = useState(null);
@@ -13,6 +16,11 @@ const RequestTour = () => {
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [additionalInfo, setAdditionalInfo] = useState("");
+    const [captchaValue, setCaptchaValue] = useState(null);
+
+    const handleCaptchaChange = (value) => {
+        setCaptchaValue(value);
+    };
 
     const handleStartDateChange = (date) => {
         setStartDate(date);
@@ -44,7 +52,7 @@ const RequestTour = () => {
         setAdditionalInfo(event.target.value);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         // Here, you can handle form submission logic
         // Access selectedDateRange, selectedLocation, name, email, and phoneNumber
@@ -53,7 +61,22 @@ const RequestTour = () => {
         console.log("Name: ", name);
         console.log("Email: ", email);
         console.log("Phone Number: ", phoneNumber);
+        console.log("Additional Info: ", additionalInfo)
         // You can also validate and submit the data to your backend if needed
+
+
+        try {
+            // Make a POST request to your server
+            const response = await axios.post("http://localhost:5000/submit-form", {
+                name,
+                email,
+                phoneNumber,
+                additionalInfo,
+            });
+            console.log(response.data); // Log the server response
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
     };
 
     return (
@@ -132,6 +155,8 @@ const RequestTour = () => {
                         <option>Midtown</option>
                         <option>Lower Manhattan</option>
                         <option>Brooklyn Bridge and Dumbo</option>
+                        <option>Upper Manhattan</option>
+                        <option>Other Area(s)</option>
                     </select>
                 </div>
                 <div className="form-group">
@@ -144,7 +169,14 @@ const RequestTour = () => {
                         onChange={handleAdditionalInfoChange}
                     ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <div className="form-group">
+                    <label>Captcha:</label>
+                    <ReCAPTCHA
+                        sitekey="6LfGi0ApAAAAAMcvj3Qkft5e3YuVey9tAYDreWCX"
+                        onChange={handleCaptchaChange}
+                    />
+                </div>
+                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
                     Submit
                 </button>
             </form>
