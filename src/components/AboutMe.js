@@ -26,9 +26,8 @@ const AboutMe = () => {
 
                                 <ol><b>Airport transfers</b></ol>
                                 <ol><b>Hotels</b></ol>
-                                <ol><b>Bus tours</b></ol>
                                 <ol><b>Broadway tickets</b></ol>
-                                <ol><b>City Go passes</b></ol>
+                                <ol><b>Go City passes</b></ol>
                                 <ol><b>Museums</b></ol>
                                 <ol><b>Subway or Public Transportation passes</b></ol>
                                 <ol><b>Your own private car tour so you don't have to walk :)</b></ol>

@@ -20,8 +20,7 @@ const KellyTours = () => {
               <p>
                 Olá! São tantos lugares para visitar e ver que fica difícil escolher quais lugares visitar e em que
                 dia E quanto posso fazer em um dia? Se você tem uma ideia do que gostaria de ver, posso ajudar a
-                personalizá-lo para você e agendar um passeio de 4 a 5 horas para você aproveitar! Grande Maçã, aí
-                vem você!
+                personalizá-lo para você e agendar um passeio de 4 a 5 horas para você aproveitar!
               </p>
               <h2>
                 <em>English!</em>

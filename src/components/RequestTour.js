@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Import the styles
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import axios from "axios";
-import ReCAPTCHA from "react-google-recaptcha";
-
+import emailjs from '@emailjs/browser';
+import "../styles/RequestTour.css"
 
 const RequestTour = () => {
     const [startDate, setStartDate] = useState(null);
@@ -16,11 +15,9 @@ const RequestTour = () => {
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [additionalInfo, setAdditionalInfo] = useState("");
-    const [captchaValue, setCaptchaValue] = useState(null);
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const handleCaptchaChange = (value) => {
-        setCaptchaValue(value);
-    };
+    const form = useRef();
 
     const handleStartDateChange = (date) => {
         setStartDate(date);
@@ -52,31 +49,34 @@ const RequestTour = () => {
         setAdditionalInfo(event.target.value);
     };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        // Here, you can handle form submission logic
-        // Access selectedDateRange, selectedLocation, name, email, and phoneNumber
-        console.log("Selected Date Range: ", selectedDateRange);
-        console.log("Selected Location: ", selectedLocation);
-        console.log("Name: ", name);
-        console.log("Email: ", email);
-        console.log("Phone Number: ", phoneNumber);
-        console.log("Additional Info: ", additionalInfo)
-        // You can also validate and submit the data to your backend if needed
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-
-        try {
-            // Make a POST request to your server
-            const response = await axios.post("http://localhost:5000/submit-form", {
-                name,
-                email,
-                phoneNumber,
-                additionalInfo,
-            });
-            console.log(response.data); // Log the server response
-        } catch (error) {
-            console.error("Error submitting form:", error);
-        }
+        emailjs
+            .sendForm(
+                "service_ldezb7p",
+                "template_vrct9fa",
+                form.current,
+                "EOGwpZ-0LfXCj4iYx"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    setFormSubmitted(true);
+                    // Reset form values
+                    setStartDate(null);
+                    setEndDate(null);
+                    setSelectedDateRange([]);
+                    setSelectedLocation("Midtown");
+                    setName("");
+                    setEmail("");
+                    setPhoneNumber("");
+                    setAdditionalInfo("");
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
     };
 
     return (
@@ -85,101 +85,83 @@ const RequestTour = () => {
             <div className="text-center">
                 <h2 style={{ color: "#6A0DAD" }}>Request A Tour</h2>
             </div>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="name"
-                        value={name}
-                        onChange={handleNameChange}
-                        required
-                    />
+            {formSubmitted ? (
+                <div className="thank-you-message"><em>Thank you for your submission!</em></div>
+            ) : (
+                <div class='container'>
+
+                    <form ref={form} onSubmit={sendEmail}>
+
+                        <div className="form-group">
+                            <label htmlFor="name">Name: </label>
+                            <input type="text" name="user_name" onChange={handleNameChange}
+                                required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email: </label>
+                            <input type="text" name="user_email" onChange={handleEmailChange}
+                                required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phoneNumber">Phone Number (optional): </label>
+                            <input type="text" name="user_phone" onChange={handlePhoneNumberChange}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="startDatePicker">Start Date: </label>
+                            <DatePicker
+                                name="startDatePicker"
+                                selected={startDate}
+                                onChange={handleStartDateChange}
+                                selectsStart
+                                startDate={startDate}
+                                endDate={endDate}
+                                dateFormat="yyyy-MM-dd"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="endDatePicker">End Date (Optional): </label>
+                            <DatePicker
+                                name="endDatePicker"
+                                selected={endDate}
+                                onChange={handleEndDateChange}
+                                selectsEnd
+                                startDate={startDate}
+                                endDate={endDate}
+                                minDate={startDate}
+                                dateFormat="yyyy-MM-dd"
+                                isClearable
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="tourLocation">Select a Tour Location: </label>
+                            <select
+                                className="form-control"
+                                name="tourLocation"
+                                value={selectedLocation}
+                                onChange={handleLocationChange}
+                            >
+                                <option>Midtown</option>
+                                <option>Lower Manhattan</option>
+                                <option>Brooklyn Bridge and Dumbo</option>
+                                <option>Upper Manhattan</option>
+                                <option>Other Area(s)</option>
+                            </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="additionalInfo">Any additional information you would like to add? Other locations to visit? </label>
+                            <textarea
+                                className="form-control"
+                                name="additionalInfo"
+                                rows="3"
+                                placeholder="Enter additional information"
+                                onChange={handleAdditionalInfoChange}
+                            ></textarea>
+                        </div>
+                        <input type="submit" value="Send" />
+                    </form>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        value={email}
-                        onChange={handleEmailChange}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="phoneNumber">Phone Number (optional):</label>
-                    <input
-                        type="tel"
-                        className="form-control"
-                        id="phoneNumber"
-                        value={phoneNumber}
-                        onChange={handlePhoneNumberChange}
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="startDatePicker">Start Date:</label>
-                    <DatePicker
-                        id="startDatePicker"
-                        selected={startDate}
-                        onChange={handleStartDateChange}
-                        selectsStart
-                        startDate={startDate}
-                        endDate={endDate}
-                        dateFormat="yyyy-MM-dd"
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="endDatePicker">End Date (Optional):</label>
-                    <DatePicker
-                        id="endDatePicker"
-                        selected={endDate}
-                        onChange={handleEndDateChange}
-                        selectsEnd
-                        startDate={startDate}
-                        endDate={endDate}
-                        minDate={startDate}
-                        dateFormat="yyyy-MM-dd"
-                        isClearable
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="tourLocation">Select a Tour Location:</label>
-                    <select
-                        className="form-control"
-                        id="tourLocation"
-                        value={selectedLocation}
-                        onChange={handleLocationChange}
-                    >
-                        <option>Midtown</option>
-                        <option>Lower Manhattan</option>
-                        <option>Brooklyn Bridge and Dumbo</option>
-                        <option>Upper Manhattan</option>
-                        <option>Other Area(s)</option>
-                    </select>
-                </div>
-                <div className="form-group">
-                    <label htmlFor="additionalInfo">Any additional information you would like to add? Other locations to visit?</label>
-                    <textarea
-                        className="form-control"
-                        id="additionalInfo"
-                        rows="3"
-                        placeholder="Enter additional information"
-                        onChange={handleAdditionalInfoChange}
-                    ></textarea>
-                </div>
-                <div className="form-group">
-                    <label>Captcha:</label>
-                    <ReCAPTCHA
-                        sitekey="6LfGi0ApAAAAAMcvj3Qkft5e3YuVey9tAYDreWCX"
-                        onChange={handleCaptchaChange}
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary" onClick={handleSubmit}>
-                    Submit
-                </button>
-            </form>
+            )}
             <Footer />
         </div>
     );
