@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from "react";
 import AboutMe from "./components/AboutMe";
 import RequestTour from "./components/RequestTour";
-import KellyTours from './KellyTours';
+import KellyTours from './components/KellyTours';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {

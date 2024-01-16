@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import emailjs from '@emailjs/browser';
 import "../styles/RequestTour.css"
+import ReCAPTCHA from "react-google-recaptcha";
 
 const RequestTour = () => {
     const [startDate, setStartDate] = useState(null);
@@ -16,6 +17,7 @@ const RequestTour = () => {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [additionalInfo, setAdditionalInfo] = useState("");
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
 
     const form = useRef();
 
@@ -52,6 +54,11 @@ const RequestTour = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        if (!recaptchaValue) {
+            alert("Please check the reCAPTCHA box.");
+            return;
+        }
+
         emailjs
             .sendForm(
                 "service_ldezb7p",
@@ -72,12 +79,12 @@ const RequestTour = () => {
                     setEmail("");
                     setPhoneNumber("");
                     setAdditionalInfo("");
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
+                })
+            .catch((error) => {
+                console.log(error.text);
+            });
     };
+
 
     return (
         <div>
@@ -157,6 +164,13 @@ const RequestTour = () => {
                                 placeholder="Enter additional information"
                                 onChange={handleAdditionalInfoChange}
                             ></textarea>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="recaptcha">reCAPTCHA</label>
+                            <ReCAPTCHA
+                                sitekey="6LdsF1MpAAAAABboBzQbhZ0rMQtAi9U_d7v2YEM8"
+                                onChange={(value) => setRecaptchaValue(value)}
+                            />
                         </div>
                         <input type="submit" value="Send" />
                     </form>
