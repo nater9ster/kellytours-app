@@ -2,7 +2,7 @@
 .form-group {
   margin-bottom: 15px;
   /* Add spacing between labels */
-  margin-left: 10px;
+  margin-left: 75px;
 }
 
 .form-group label {
@@ -15,4 +15,9 @@
   color: green;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.title {
+  text-align: center;
+
 }

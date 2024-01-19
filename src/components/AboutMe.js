@@ -11,7 +11,7 @@ const AboutMe = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">
-                                <img src="./HudsonYards.JPG" alt="Profile Image" className="img-fluid profile-image" />
+                                <img src="./HudsonYards.JPG" alt="In front of Hudson Yards" className="img-fluid profile-image" />
                             </div>
                             <div className="col-lg-6">
                                 <p><h2>Hi, I'm Kelly.</h2></p>
@@ -51,13 +51,13 @@ const AboutMe = () => {
                     <div className="container">
                         <div className="row photo-grid">
                             <div className="col-lg-4">
-                                <img src="./FunTimesSquare.JPG" alt="Photo 1" className="img-fluid" />
+                                <img src="./FunTimesSquare.JPG" alt="1" className="img-fluid" />
                             </div>
                             <div className="col-lg-4">
-                                <img src="./ElegantLadies.JPG" alt="Photo 2" className="img-fluid" />
+                                <img src="./ElegantLadies.JPG" alt="2" className="img-fluid" />
                             </div>
                             <div className="col-lg-4">
-                                <img src="./LittleIsland.JPG" alt="Photo 3" className="img-fluid" />
+                                <img src="./LittleIsland.JPG" alt="3" className="img-fluid" />
                             </div>
                         </div>
                     </div>
