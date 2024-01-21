@@ -165,7 +165,7 @@ const RequestTour = () => {
                     <div className="form-group">
                         <label htmlFor="recaptcha">reCAPTCHA</label><br />
                         <ReCAPTCHA
-                            sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                            sitekey="6LdsF1MpAAAAABboBzQbhZ0rMQtAi9U_d7v2YEM8"
                             onChange={(value) => setRecaptchaValue(value)}
                         />
                     </div>
