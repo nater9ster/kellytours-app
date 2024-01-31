@@ -50,6 +50,7 @@ const RequestTour = () => {
     const handleAdditionalInfoChange = (event) => {
         setAdditionalInfo(event.target.value);
     };
+    const currentDate = new Date();
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -101,8 +102,8 @@ const RequestTour = () => {
                         <input type="text" name="user_name" onChange={handleNameChange} required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email</label>< br />
-                        <input type="text" name="user_email" onChange={handleEmailChange} required />
+                        <label htmlFor="email">Email</label><br />
+                        <input type="email" name="user_email" onChange={handleEmailChange} required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="phoneNumber">Phone Number (optional)</label><br />
@@ -110,33 +111,30 @@ const RequestTour = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="startDatePicker">Start Date</label><br />
-                        {startDate && (
-                            <DatePicker
-                                name="startDatePicker"
-                                selected={startDate}
-                                onChange={date => setStartDate(date)}
-                                selectsStart
-                                startDate={startDate}
-                                endDate={endDate}
-                                dateFormat="yyyy-MM-dd"
-                            />
-                        )}
+                        <DatePicker
+                            name="startDatePicker"
+                            selected={startDate}
+                            onChange={date => setStartDate(date)}
+                            selectsStart
+                            startDate={startDate}
+                            endDate={endDate}
+                            minDate={currentDate} // Set the minimum date to the current date
+                            dateFormat="yyyy-MM-dd"
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="endDatePicker">End Date (Optional)</label><br />
-                        {endDate && (
-                            <DatePicker
-                                name="endDatePicker"
-                                selected={endDate}
-                                onChange={date => setEndDate(date)}
-                                selectsEnd
-                                startDate={startDate}
-                                endDate={endDate}
-                                minDate={startDate}
-                                dateFormat="yyyy-MM-dd"
-                                isClearable
-                            />
-                        )}
+                        <DatePicker
+                            name="endDatePicker"
+                            selected={endDate}
+                            onChange={date => setEndDate(date)}
+                            selectsEnd
+                            startDate={startDate}
+                            endDate={endDate}
+                            minDate={startDate || currentDate} // Set the minimum date to either the start date or the current date
+                            dateFormat="yyyy-MM-dd"
+                            isClearable
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="tourLocation">Select a Tour Location</label><br />
@@ -179,9 +177,10 @@ const RequestTour = () => {
 
 
                 </form>
-            )}
+            )
+            }
             <Footer />
-        </div>
+        </div >
     );
 };
 

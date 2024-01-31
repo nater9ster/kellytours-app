@@ -9,7 +9,7 @@ const KellyTours = () => {
       <Navbar />
       <div class="container">
         <div class="row row-content full-height">
-          <div class="col-md-6 text-center text-container full-height">
+          <div class="col-12 col-md-6 text-center text-container full-height">
             <h2><strong>Take a walking tour with KellyManhattanTours!</strong></h2>
             <h2><em>Portuguese!</em></h2>
             <p>
