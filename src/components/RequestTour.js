@@ -110,29 +110,33 @@ const RequestTour = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="startDatePicker">Start Date</label><br />
-                        <DatePicker
-                            name="startDatePicker"
-                            selected={startDate}
-                            onChange={handleStartDateChange}
-                            selectsStart
-                            startDate={startDate}
-                            endDate={endDate}
-                            dateFormat="yyyy-MM-dd"
-                        />
+                        {startDate && (
+                            <DatePicker
+                                name="startDatePicker"
+                                selected={startDate}
+                                onChange={date => setStartDate(date)}
+                                selectsStart
+                                startDate={startDate}
+                                endDate={endDate}
+                                dateFormat="yyyy-MM-dd"
+                            />
+                        )}
                     </div>
                     <div className="form-group">
                         <label htmlFor="endDatePicker">End Date (Optional)</label><br />
-                        <DatePicker
-                            name="endDatePicker"
-                            selected={endDate}
-                            onChange={handleEndDateChange}
-                            selectsEnd
-                            startDate={startDate}
-                            endDate={endDate}
-                            minDate={startDate}
-                            dateFormat="yyyy-MM-dd"
-                            isClearable
-                        />
+                        {endDate && (
+                            <DatePicker
+                                name="endDatePicker"
+                                selected={endDate}
+                                onChange={date => setEndDate(date)}
+                                selectsEnd
+                                startDate={startDate}
+                                endDate={endDate}
+                                minDate={startDate}
+                                dateFormat="yyyy-MM-dd"
+                                isClearable
+                            />
+                        )}
                     </div>
                     <div className="form-group">
                         <label htmlFor="tourLocation">Select a Tour Location</label><br />
