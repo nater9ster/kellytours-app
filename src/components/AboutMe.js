@@ -38,8 +38,32 @@ const AboutMe = () => {
                                     Queens County Farm, Dumbo with Time Out NY restaurants and the carousel, Coney Island and Rockaway Beaches, Jones Beach, Orchard Beach in the Bronx, the Bronx Zoo,
                                     Montauk and the Hamptons, Lavender by the Bay in Long Island, the Staten Island Ferry, South Beach in Staten Island, Snug Harbor in Staten Island, Croton Gorge Park,
                                     the Storm King Art Center, Bear Mountain, Cold Springs, Beacon, Ithaca, Buffalo and Niagara Falls, and any playground for our daughter!
+                                </p>< br />
+                                <p><h2>Olá, meu nome é Kelly.</h2></p>
+                                <p>Sou guia turístico de Nova York especializado em passeios a pé. Sou natural de Campinas, São Paulo, Brasil.</p>
+                                <p>Vim para Nova York em 2015 para estudar inglês e
+                                    me apaixonei pela cidade!</p>
+                                <p><i><b>Falo português, inglês e espanhol!</b></i></p>
+                                <p>Estou ansioso para agendar um passeio a pé com você, quer você esteja visitando Nova York em uma viagem solo,
+                                    com seus amigos ou cônjuge, ou com toda a sua família!
                                 </p>
+                                <p>Também posso reservar:</p>
 
+                                <ol><b>Transferências de aeroporto</b></ol>
+                                <ol><b>Hotéis</b></ol>
+                                <ol><b>Ingressos da Broadway</b></ol>
+                                <ol><b>Passes Go City</b></ol>
+                                <ol><b>Museus</b></ol>
+                                <ol><b>Passes de metrô ou transporte público</b></ol>
+                                <ol><b>Seu próprio passeio de carro particular para que você não precise caminhar :)</b></ol>
+                                <p>Quando não estou trabalhando, gosto de viajar e passar tempo com minha família. Vivemos no Queens.
+                                    Fora de Manhattan, gostamos de visitar diferentes partes da cidade e também do interior do estado de Nova York.</p>
+                                <p>Aqui estão alguns deles:</p>
+                                <p>Parque Flushing Meadows, Parque Florestal,
+                                    Queens County Farm, Dumbo com os restaurantes Time Out NY e o carrossel, Coney Island e Rockaway Beaches, Jones Beach, Orchard Beach no Bronx, o Zoológico do Bronx,
+                                    Montauk e os Hamptons, Lavender by the Bay em Long Island, Staten Island Ferry, South Beach em Staten Island, Snug Harbor em Staten Island, Croton Gorge Park,
+                                    o Storm King Art Center, Bear Mountain, Cold Springs, Beacon, Ithaca, Buffalo e Niagara Falls, e qualquer playground para nossa filha!
+                                </p><br />
                             </div>
                         </div>
                     </div>

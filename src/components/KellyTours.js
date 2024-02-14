@@ -30,7 +30,7 @@ const KellyTours = () => {
             </h2>
             <p>Bienvenido a la ciudad de Nueva York! :)</p>
           </div>
-          <div className="col-md-6">
+          <div className="col-12 col-md-6 full-height">
             <img src="/empire_state.jpg" alt="New York City" className="image-placeholder" />
           </div>
 

@@ -91,14 +91,14 @@ const RequestTour = () => {
         <div>
             <Navbar />
             <div className="title">
-                <h2 style={{ color: "#6A0DAD" }}>Request A Tour</h2>
+                <h2 style={{ color: "#6A0DAD" }}>Request a tour or information!< br />Solicite um tour ou informações!</h2>
             </div>
             {formSubmitted ? (
-                <div className="thank-you-message"><em>Thank you for your submission!</em></div>
+                <div className="thank-you-message"><em>Thank you for your submission! <br />Obrigado pela sua submissão!</em></div>
             ) : (
                 <form ref={form} onSubmit={sendEmail} className="form-container">
                     <div className="form-group">
-                        <label htmlFor="name">Name</label><br />
+                        <label htmlFor="name">Name (Nome)</label><br />
                         <input type="text" name="user_name" onChange={handleNameChange} required />
                     </div>
                     <div className="form-group">
@@ -106,11 +106,11 @@ const RequestTour = () => {
                         <input type="email" name="user_email" onChange={handleEmailChange} required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="phoneNumber">Phone Number (optional)</label><br />
+                        <label htmlFor="phoneNumber">Phone Number (optional) Número de telefone (opcional)</label><br />
                         <input type="text" name="user_phone" onChange={handlePhoneNumberChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="startDatePicker">Start Date</label><br />
+                        <label htmlFor="startDatePicker">Start Date (Data de início)</label><br />
                         <DatePicker
                             name="startDatePicker"
                             selected={startDate}
@@ -123,7 +123,7 @@ const RequestTour = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="endDatePicker">End Date (Optional)</label><br />
+                        <label htmlFor="endDatePicker">End Date (Optional) Data de término (opcional)</label><br />
                         <DatePicker
                             name="endDatePicker"
                             selected={endDate}
@@ -137,7 +137,7 @@ const RequestTour = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="tourLocation">Select a Tour Location</label><br />
+                        <label htmlFor="tourLocation">Select a Tour Location (Selecione um local de passeio)</label><br />
                         <select
                             className="form-control"
                             name="tourLocation"
@@ -145,16 +145,21 @@ const RequestTour = () => {
                             onChange={handleLocationChange}
                         >
                             <option>Midtown</option>
-                            <option>Lower Manhattan</option>
+                            <option>Lower (mais baixo
+                                )Manhattan</option>
                             <option>Brooklyn Bridge and Dumbo</option>
-                            <option>Upper Manhattan</option>
-                            <option>Other Area(s)</option>
+                            <option>Upper (superiora) Manhattan</option>
+                            <option>Other Area(s)
+                                Outros locais, ingressos, transferências, etc.</option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="additionalInfo">Any additional information?
                             <br />Other locations to visit?
-                            <br />Broadway Shows, museums, airport transfers, etc?</label>
+                            <br />Broadway Shows, museums, airport transfers, etc?
+                            <br />Alguma informação adicional? Outros locais para visitar?
+                            <br />Espetáculos da Broadway, museus, traslados de aeroporto, etc?
+                            <br /></label>
                         <br />
                         <textarea
                             className="form-control"
@@ -172,7 +177,7 @@ const RequestTour = () => {
                         />
                     </div>
                     <div className="form-group"><br />
-                        <input type="submit" value="Send" />
+                        <input type="submit" value="Send (Enviar)" />
                     </div>
 
 
