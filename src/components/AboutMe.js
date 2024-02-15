@@ -12,7 +12,9 @@ const AboutMe = () => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <img src="./HudsonYards.JPG" alt="In front of Hudson Yards" className="img-fluid profile-image" />
+                                <img src="./Bridge1.JPG" alt="Brooklyn Bridge" className="img-fluid profile-image mx-auto d-block my-3" />
                             </div>
+
                             <div className="col-lg-6">
                                 <p><h2>Hi, I'm Kelly.</h2></p>
                                 <p>I'm a New York City tour guide specializing in walking tours. I'm originally from Campinas, Sao Paulo, Brazil.</p>
@@ -67,6 +69,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                     </div>
+
                 </section>
             </div>
 
