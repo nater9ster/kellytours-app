@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import '../styles/kellytours.css';
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -22,10 +23,10 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About Me</Link>
+              <Link className="nav-link navbar-link-border" to="/about">About Me<br />Sobre mim</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/request">Request A Tour !</Link>
+              <Link className="nav-link navbar-link-border" to="/request">Request a tour, tickets, or other services<br />Solicitar um passeio, ingressos ou outros serviços</Link>
             </li>
           </ul>
         </div>

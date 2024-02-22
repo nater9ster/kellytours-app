@@ -59,10 +59,24 @@ body {
 }
 /* Adjust the height of the image placeholder */
 .image-placeholder {
-  height: 100%; /* Adjust the height as needed */
   max-width: 100%; /* Ensure the image is not wider than its parent */
   object-fit: cover; /* Ensure the image scales proportionally */
 }
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .image-placeholder {
+    height: auto; /* Adjust the height to be automatic on smaller screens */
+  }
+}
+
+/* Larger devices */
+@media (min-width: 769px) {
+  .image-placeholder {
+    height: 100%; /* Keep the image tall on larger screens */
+  }
+}
+
 
 .carousel-image {
   width: 200px;
@@ -85,6 +99,16 @@ body {
 .carousel-image {
   height: 290px; /* Set the desired height */
 }
+.navbar-link-border {
+  border: 2px solid black; /* Adjust the border size and color as needed */
+  padding: 5px; /* Add some padding inside the border */
+  border-radius: 5px; /* Optional: add border-radius for rounded corners */
+  display: inline-block; /* Ensure padding and border are applied correctly */
+  margin: 5px; /* Optional: add some margin for spacing between navbar items */
+  color: inherit; /* Optional: ensures the link color inherits from the parent */
+  text-decoration: none; /* Optional: removes the underline from the links */
+}
+
 
 
 

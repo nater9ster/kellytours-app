@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import ImageCarousel from "./ImageCarousel";
 import Footer from "./Footer"; // Import Footer component
+import '../styles/kellytours.css';
 
 const KellyTours = () => {
   return (
@@ -32,6 +33,7 @@ const KellyTours = () => {
           </div>
           <div className="col-12 col-md-6 full-height">
             <img src="/empire_state.jpg" alt="New York City" className="image-placeholder" />
+
           </div>
 
         </div>

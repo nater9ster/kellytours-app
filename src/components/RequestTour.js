@@ -91,7 +91,7 @@ const RequestTour = () => {
         <div>
             <Navbar />
             <div className="title">
-                <h2 style={{ color: "#6A0DAD" }}>Request a tour or information!< br />Solicite um tour ou informações!</h2>
+                <h2 style={{ color: "#6A0DAD" }}>Request a tour, tickets, or other services< br />Solicitar um passeio, ingressos ou outros serviços</h2>
             </div>
             {formSubmitted ? (
                 <div className="thank-you-message"><em>Thank you for your submission! <br />Obrigado pela sua submissão!</em></div>
