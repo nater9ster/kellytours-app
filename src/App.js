@@ -5,7 +5,6 @@ import RequestTour from "./components/RequestTour";
 import KellyTours from './components/KellyTours';
 import 'bootstrap/dist/css/bootstrap.css';
 import SSL from './components/SSL';
-import './styles/kellytours.css';
 
 
 const App = () => {

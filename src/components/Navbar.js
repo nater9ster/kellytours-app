@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import '../styles/kellytours.css';
 
+
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 

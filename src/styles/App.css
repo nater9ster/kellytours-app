@@ -72,6 +72,15 @@ a.twitter {
 a.instagram {
   color: black;
 }
+.navbar-link-border {
+  border: 5px solid rgb(10, 45, 203); /* Adjust the border size and color as needed */
+  padding: 5px; /* Add some padding inside the border */
+  border-radius: 5px; /* Optional: add border-radius for rounded corners */
+  display: inline-block; /* Ensure padding and border are applied correctly */
+  margin: 5px; /* Optional: add some margin for spacing between navbar items */
+  color: inherit; /* Optional: ensures the link color inherits from the parent */
+  text-decoration: none; /* Optional: removes the underline from the links */
+}
 
 
 

@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import emailjs from '@emailjs/browser';
 import "../styles/RequestTour.css"
 import ReCAPTCHA from "react-google-recaptcha";
+import '../styles/kellytours.css';
+
 
 const RequestTour = () => {
     const [startDate, setStartDate] = useState(null);

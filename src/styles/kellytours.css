@@ -57,23 +57,28 @@ body {
   /* Adjust font size for paragraph (consistent with .col-md-6 p) */
   line-height: 1.6;
 }
+
 /* Adjust the height of the image placeholder */
 .image-placeholder {
-  max-width: 100%; /* Ensure the image is not wider than its parent */
-  object-fit: cover; /* Ensure the image scales proportionally */
+  max-width: 100%;
+  /* Ensure the image is not wider than its parent */
+  object-fit: cover;
+  /* Ensure the image scales proportionally */
 }
 
 /* Mobile devices */
 @media (max-width: 768px) {
   .image-placeholder {
-    height: auto; /* Adjust the height to be automatic on smaller screens */
+    height: auto;
+    /* Adjust the height to be automatic on smaller screens */
   }
 }
 
 /* Larger devices */
 @media (min-width: 769px) {
   .image-placeholder {
-    height: 100%; /* Keep the image tall on larger screens */
+    height: 100%;
+    /* Keep the image tall on larger screens */
   }
 }
 
@@ -84,7 +89,8 @@ body {
 }
 
 .photo-section img {
-  max-height: 400px; /* Adjust the height as needed */
+  max-height: 400px;
+  /* Adjust the height as needed */
 }
 
 /* styles.css */
@@ -92,23 +98,45 @@ body {
 /* Set a maximum height for the profile image */
 .profile-image {
   max-height: 900px;
-   /* You can adjust the height to your preference */
+  /* You can adjust the height to your preference */
 }
 
 /* custom.css */
 .carousel-image {
-  height: 290px; /* Set the desired height */
+  height: 290px;
+  /* Set the desired height */
 }
+
 .navbar-link-border {
-  border: 2px solid black; /* Adjust the border size and color as needed */
-  padding: 5px; /* Add some padding inside the border */
-  border-radius: 5px; /* Optional: add border-radius for rounded corners */
-  display: inline-block; /* Ensure padding and border are applied correctly */
-  margin: 5px; /* Optional: add some margin for spacing between navbar items */
-  color: inherit; /* Optional: ensures the link color inherits from the parent */
-  text-decoration: none; /* Optional: removes the underline from the links */
+  border: 2px solid black !important;
+  padding: 5px !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  margin: 5px !important;
+  text-decoration: none !important;
+  color: white !important;
+  /* Set text color to white */
 }
 
+.navbar-link-border:hover {
+  color: #f8f9fa !important;
+  /* Lighter shade of white for hover effect */
+  background-color: #00000030 !important;
+  /* Optional: slight background color on hover */
+}
 
+.navbar-brand {
+  /* Reuse .navbar-link-border styles or declare similar ones */
+  border: 2px solid black !important;
+  padding: 5px !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  margin: 5px !important;
+  text-decoration: none !important;
+  color: white !important;
+}
 
-
+.navbar-brand:hover {
+  color: #f8f9fa !important;
+  background-color: #00000030 !important;
+}
