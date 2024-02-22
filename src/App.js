@@ -14,7 +14,7 @@ const App = () => {
           <Route path='/' element={<KellyTours />} />
           <Route path="/about" element={<AboutMe />} />
           <Route path="/request" element={<RequestTour />} />
-          <Route path="/.well-known/pki-validation/C09C14A0079DD292F8F9271940F27E6B.txt" element={<SSL />} />
+          <Route path="/.well-known/pki-validation" element={<SSL />} />
         </Routes>
       </Router>
     </div>
